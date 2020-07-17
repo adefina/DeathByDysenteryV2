@@ -28,9 +28,13 @@ class Wagon {
     totalFood () {              //whole section needs attention 
         let foodOnly = this.passengers.map(passenger => passenger.food)
             console.log(foodOnly)
-            let food = 0
-            for (let counter = 0; counter <= foodOnly.length; counter++) { 
-                return food += foodOnly[counter]
-            }
+            // let food = 0
+            // for (let counter = 0; counter <= foodOnly.length; counter++) { 
+            //     return food += foodOnly[counter]
+            // }
+            let sum = foodOnly.reduce(function(a,b) { 
+                return a+b
+            },0)
+            return (sum)
     }
 }
